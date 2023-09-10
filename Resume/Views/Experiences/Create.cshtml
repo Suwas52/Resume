@@ -1,0 +1,73 @@
+﻿@model Resume.Models.Experience
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Experience</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="start_date" class="control-label"></label>
+                <input asp-for="start_date" class="form-control" />
+                <span asp-validation-for="start_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="end_date" class="control-label"></label>
+                <input asp-for="end_date" class="form-control" />
+                <span asp-validation-for="end_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="company_name" class="control-label"></label>
+                <input asp-for="company_name" class="form-control" />
+                <span asp-validation-for="company_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="company_address" class="control-label"></label>
+                <input asp-for="company_address" class="form-control" />
+                <span asp-validation-for="company_address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="website_link" class="control-label"></label>
+                <input asp-for="website_link" class="form-control" />
+                <span asp-validation-for="website_link" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="frontend_skill" class="control-label"></label>
+                <input asp-for="frontend_skill" class="form-control" />
+                <span asp-validation-for="frontend_skill" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="backend_skill" class="control-label"></label>
+                <input asp-for="backend_skill" class="form-control" />
+                <span asp-validation-for="backend_skill" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="info_id" class="control-label"></label>
+                <input asp-for="info_id" class="form-control" />
+                <span asp-validation-for="info_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

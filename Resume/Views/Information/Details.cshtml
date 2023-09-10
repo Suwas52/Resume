@@ -1,0 +1,72 @@
+﻿@model Resume.Models.Information
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Information</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.address)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.summary)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.summary)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.designation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.designation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.porfolio_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.porfolio_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.portfolio_link)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.portfolio_link)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.number)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.number)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.info_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

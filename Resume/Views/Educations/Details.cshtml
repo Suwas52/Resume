@@ -1,0 +1,42 @@
+﻿@model Resume.Models.Education
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Education</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.school_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.school_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.university_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.university_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.info_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.info_id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.education_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

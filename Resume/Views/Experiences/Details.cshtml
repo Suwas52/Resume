@@ -1,0 +1,72 @@
+﻿@model Resume.Models.Experience
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Experience</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.start_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.start_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.end_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.end_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.company_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.company_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.company_address)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.company_address)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.website_link)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.website_link)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.frontend_skill)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.frontend_skill)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.backend_skill)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.backend_skill)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.info_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.info_id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.experience_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
